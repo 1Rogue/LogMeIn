@@ -1,0 +1,20 @@
+main: com.rogue.logmein.LogMeIn
+name: ${project.name}
+prefix: LMI
+description: Allows server admins to log in as another player
+version: ${project.version}
+author: 1Rogue
+website: https://github.com/1Rogue
+permissions:
+  logmein.*:
+    default: op
+    children:
+      logmein.login: true
+      logmein.logout: true
+commands:
+  logmein:
+    permission: logmein.login
+    aliases: ["lmi"]
+  logmeout:
+    permission: logmein.logout
+    aliases: ["lmo"]
